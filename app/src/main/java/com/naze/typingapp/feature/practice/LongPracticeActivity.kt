@@ -1,4 +1,4 @@
-package com.naze.typingapp.feature.main.practice
+package com.naze.typingapp.feature.practice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +15,6 @@ class LongPracticeActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this@LongPracticeActivity, R.layout.activity_long_practice)
 
         //Action Bar 설정
-        setSupportActionBar(binding.toolbarLongPractice)
 
     }
 

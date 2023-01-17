@@ -7,19 +7,21 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".feature.main.MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_license"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="License List"/>
+    </RelativeLayout>
 </layout>

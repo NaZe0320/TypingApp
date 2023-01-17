@@ -1,4 +1,4 @@
-package com.naze.typingapp.feature.main.practice
+package com.naze.typingapp.feature.practice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -14,14 +14,14 @@
         android:theme="@style/Theme.TypingApp"
         tools:targetApi="31">
         <activity
-            android:name=".feature.main.practice.LongPracticeSettingActivity"
+            android:name=".feature.practice.LongPracticeSettingActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".feature.main.practice.LongPracticeActivity"
+            android:name=".feature.practice.LongPracticeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

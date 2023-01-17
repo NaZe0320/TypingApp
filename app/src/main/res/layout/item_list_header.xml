@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/expanded_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeWidth="1dp"
+            app:cardCornerRadius="3dp">
+
+            <TextView
+                android:id="@+id/tv_expand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="긴 글 연습"
+                android:textSize="18sp"
+                android:paddingStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+            
+            <ImageButton
+                android:id="@+id/btn_expand"
+                android:src="@drawable/ic_arrow_drop_down_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="end">
+
+            </ImageButton>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/ll_expand_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#D8D7D7">
+        </LinearLayout>
+        
+    </LinearLayout>
+</layout>
