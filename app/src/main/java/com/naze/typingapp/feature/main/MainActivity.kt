@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.naze.typingapp.R
 import com.naze.typingapp.databinding.ActivityMainBinding
+import com.naze.typingapp.feature.practice.LongPracticeActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         setMenuList()
 
-
         binding.btnLicense.setOnClickListener {
             OssLicensesMenuActivity.setActivityTitle("오픈소스 라이센스 목록")
             startActivity(Intent(this, OssLicensesMenuActivity::class.java))
+        }
+
+        binding.btnTest.setOnClickListener {
+            val intent = Intent(this, LongPracticeActivity::class.java)
+            startActivity(intent)
         }
     }
 

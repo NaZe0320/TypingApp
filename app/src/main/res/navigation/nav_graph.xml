@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/longPracticeSettingFragment">
+    <fragment
+        android:id="@+id/longPracticeSettingFragment"
+        android:name="com.naze.typingapp.feature.practice.LongPracticeSettingFragment"
+        android:label="LongPracticeSettingFragment" >
+        <action
+            android:id="@+id/action_longPracticeSettingFragment_to_longPracticeFragment"
+            app:destination="@id/longPracticeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/longPracticeFragment"
+        android:name="com.naze.typingapp.feature.practice.LongPracticeFragment"
+        android:label="LongPracticeFragment" />
+</navigation>

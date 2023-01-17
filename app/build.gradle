@@ -48,4 +48,17 @@ dependencies {
 
     //Library License 
     implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:2.5.3"
+    implementation "androidx.navigation:navigation-ui:2.5.3"
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+
+    // Dynamic Feature Module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.5.3"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:2.5.3"
 }
