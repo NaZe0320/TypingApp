@@ -9,9 +9,7 @@
         android:label="LongPracticeSettingFragment" >
         <action
             android:id="@+id/action_longPracticeSettingFragment_to_longPracticeFragment"
-            app:destination="@id/longPracticeFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim" />
+            app:destination="@id/longPracticeFragment" />
     </fragment>
     <fragment
         android:id="@+id/longPracticeFragment"

@@ -34,4 +34,8 @@ class LongPracticeActivity : AppCompatActivity() {
         transaction.replace(R.id.fl_long_practice, fragment, tag)
         transaction.commit()
     }*/
+
+    override fun onBackPressed() {
+        finish()
+    }
 }
