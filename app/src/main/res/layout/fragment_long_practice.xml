@@ -100,51 +100,110 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
 
-                    <ProgressBar
-                        android:id="@+id/progress_progress"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="4dp"
-                        android:max="100"
-                        android:progress="50"
-                        android:progressTint="@color/black"
-                        android:progressDrawable="@drawable/custom_progressbar_circular"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    <FrameLayout
+                        android:id="@+id/fl_progress"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/progress_time">
+                        app:layout_constraintEnd_toStartOf="@+id/fl_time">
 
-                    </ProgressBar>
+                        <ProgressBar
+                            android:id="@+id/progress_progress"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:max="99"
+                            android:progress="5"
+                            android:progressTint="@color/black"
+                            android:progressDrawable="@drawable/custom_progressbar_circular"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal">
+                        </ProgressBar>
 
-                    <ProgressBar
-                        android:id="@+id/progress_time"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:text="5/99"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_time"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_margin="4dp"
-                        android:layout_gravity="center_vertical"
-                        android:max="100"
-                        android:progress="50"
-                        android:progressTint="@color/black"
-                        android:progressDrawable="@drawable/custom_progressbar_circular"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/progress_progress">
+                        app:layout_constraintStart_toEndOf="@+id/fl_progress">
 
-                    </ProgressBar>
+                        <ProgressBar
+                            android:id="@+id/progress_time"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressTint="@color/black"
+                            android:progressDrawable="@drawable/custom_progressbar_circular"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal">
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:text="10/20"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:text="진행도"
+                        app:layout_constraintTop_toBottomOf="@+id/fl_progress"
+                        app:layout_constraintStart_toStartOf="@+id/fl_progress"
+                        app:layout_constraintEnd_toEndOf="@+id/fl_progress">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:text="시간"
+                        app:layout_constraintTop_toBottomOf="@+id/fl_time"
+                        app:layout_constraintStart_toStartOf="@+id/fl_time"
+                        app:layout_constraintEnd_toEndOf="@+id/fl_time">
+
+                    </TextView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
             </LinearLayout>
-
-
-
 
 
         </com.google.android.material.card.MaterialCardView>
