@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="card_cornerRadius">8dp</dimen>
+    
+    <dimen name="progressBar_margin_horizontal">4dp</dimen>
+    <dimen name="progressBar_margin_vertical">2dp</dimen>
+    <dimen name="progressBar_height">14dp</dimen>
+    <dimen name="progressBar_layout_height">20dp</dimen>
+
+    <dimen name="progressBar_circular_length">60dp</dimen>
+
+    <dimen name="info_textSize">14sp</dimen>
 
 </resources>

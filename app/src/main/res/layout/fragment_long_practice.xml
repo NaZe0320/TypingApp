@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/teal_700">
+        android:background="@color/background_color">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -17,33 +17,31 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="4dp">
+            android:layout_margin="@dimen/card_margin"
+            app:cardBackgroundColor="@color/card_background_color"
+            app:cardCornerRadius="@dimen/card_cornerRadius">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/progressBar_layout_height"
                     android:orientation="horizontal"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginHorizontal="@dimen/progressBar_margin_horizontal"
+                    android:layout_marginVertical="@dimen/progressBar_margin_vertical"
                     android:layout_weight="5">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="속도 [타/분]"
+                        android:text="@string/speed"
                         android:layout_gravity="center_vertical"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/info_textSize"
                         android:textColor="@color/black">
                     </TextView>
 
@@ -51,13 +49,14 @@
                         android:id="@+id/progress_speed"
                         android:layout_width="0dp"
                         android:layout_weight="4"
-                        android:layout_height="12dp"
-                        android:layout_margin="4dp"
+                        android:layout_height="@dimen/progressBar_height"
                         android:layout_gravity="center_vertical"
                         android:max="100"
                         android:progress="50"
                         android:progressDrawable="@drawable/custom_progressbar_linear"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal">
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progressTint="@color/progressBar_progress_color_speed"
+                        android:progressBackgroundTint="@color/progressBar_background_color">
 
                     </ProgressBar>
 
@@ -65,19 +64,19 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/progressBar_layout_height"
                     android:orientation="horizontal"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginHorizontal="@dimen/progressBar_margin_horizontal"
+                    android:layout_marginVertical="@dimen/progressBar_margin_vertical"
                     android:layout_weight="5">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="정확도 [%]"
+                        android:text="@string/accuracy"
                         android:layout_gravity="center_vertical"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/info_textSize"
                         android:textColor="@color/black">
 
                     </TextView>
@@ -86,46 +85,44 @@
                         android:id="@+id/progress_accuracy"
                         android:layout_width="0dp"
                         android:layout_weight="4"
-                        android:layout_height="12dp"
-                        android:layout_margin="4dp"
+                        android:layout_height="@dimen/progressBar_height"
                         android:layout_gravity="center_vertical"
                         android:max="100"
                         android:progress="50"
                         android:progressDrawable="@drawable/custom_progressbar_linear"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal">
-
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:progressTint="@color/progressBar_progress_color_accuracy"
+                        android:progressBackgroundTint="@color/progressBar_background_color">
                     </ProgressBar>
 
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_height="wrap_content">
 
                     <FrameLayout
                         android:id="@+id/fl_progress"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="@dimen/progressBar_circular_length"
+                        android:layout_height="@dimen/progressBar_circular_length"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/fl_time">
 
                         <ProgressBar
                             android:id="@+id/progress_progress"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="@dimen/progressBar_circular_length"
+                            android:layout_height="@dimen/progressBar_circular_length"
                             android:max="99"
                             android:progress="5"
-                            android:progressTint="@color/black"
+                            android:progressTint="@color/progressBar_progress_color_progress"
                             android:progressDrawable="@drawable/custom_progressbar_circular"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal">
                         </ProgressBar>
 
                         <LinearLayout
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="@dimen/progressBar_circular_length"
+                            android:layout_height="@dimen/progressBar_circular_length"
                             android:layout_gravity="center"
                             android:gravity="center">
 
@@ -134,36 +131,34 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="12sp"
+                                android:textSize="@dimen/info_textSize"
                                 android:textStyle="bold"
-                                android:text="5/99"/>
+                                android:text="05/99"/>
                         </LinearLayout>
                     </FrameLayout>
 
                     <FrameLayout
                         android:id="@+id/fl_time"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="4dp"
+                        android:layout_width="@dimen/progressBar_circular_length"
+                        android:layout_height="@dimen/progressBar_circular_length"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/fl_progress">
 
                         <ProgressBar
                             android:id="@+id/progress_time"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="@dimen/progressBar_circular_length"
+                            android:layout_height="@dimen/progressBar_circular_length"
                             android:max="100"
                             android:progress="50"
-                            android:progressTint="@color/black"
+                            android:progressTint="@color/progressBar_progress_color_time"
                             android:progressDrawable="@drawable/custom_progressbar_circular"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal">
                         </ProgressBar>
 
                         <LinearLayout
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="@dimen/progressBar_circular_length"
+                            android:layout_height="@dimen/progressBar_circular_length"
                             android:layout_gravity="center"
                             android:gravity="center">
 
@@ -172,18 +167,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="12sp"
+                                android:textSize="@dimen/info_textSize"
                                 android:textStyle="bold"
-                                android:text="10/20"/>
+                                android:text="10:20"/>
                         </LinearLayout>
                     </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/info_textSize"
                         android:textColor="#000000"
-                        android:text="진행도"
+                        android:text="@string/progress"
                         app:layout_constraintTop_toBottomOf="@+id/fl_progress"
                         app:layout_constraintStart_toStartOf="@+id/fl_progress"
                         app:layout_constraintEnd_toEndOf="@+id/fl_progress">
@@ -193,9 +188,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:textColor="#000000"
-                        android:text="시간"
+                        android:textSize="@dimen/info_textSize"
+                        android:textColor="@color/info_text_color"
+                        android:text="@string/time"
                         app:layout_constraintTop_toBottomOf="@+id/fl_time"
                         app:layout_constraintStart_toStartOf="@+id/fl_time"
                         app:layout_constraintEnd_toEndOf="@+id/fl_time">

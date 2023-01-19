@@ -11,4 +11,18 @@
 
     <color name="toolbar_background">#FFF5EBBF</color>
     <color name="toolbar_textColor">#FF000000</color>
+
+    <color name="background_color">#E3F6FF</color>
+
+
+    <color name="card_background_color">#91D8E4</color>
+
+    <color name="info_text_color">#000000</color>
+    <color name="info_text_color_circular_progress">#FFFFFF</color>
+
+    <color name="progressBar_progress_color_speed">#FF597B</color>
+    <color name="progressBar_progress_color_accuracy">#4B56D2</color>
+    <color name="progressBar_progress_color_progress">#7F167F</color>
+    <color name="progressBar_progress_color_time">#A555EC</color>
+    <color name="progressBar_background_color">#DDDDDD</color>
 </resources>

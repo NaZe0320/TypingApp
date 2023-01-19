@@ -6,14 +6,7 @@
             <solid android:color="#D5D5D5" />
         </shape>
     </item>
-    <item android:id="@android:id/secondaryProgress">
-        <clip>
-            <shape>
-                <corners android:radius="6dp" />
-                <solid android:color="#B2CCFF" />
-            </shape>
-        </clip>
-    </item>
+
     <item android:id="@android:id/progress">
         <clip>
             <shape>
