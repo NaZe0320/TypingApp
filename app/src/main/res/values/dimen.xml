@@ -9,8 +9,17 @@
     <dimen name="progressBar_height">14dp</dimen>
     <dimen name="progressBar_layout_height">20dp</dimen>
 
-    <dimen name="progressBar_circular_length">60dp</dimen>
+    <dimen name="progressBar_circular_length">72dp</dimen>
 
     <dimen name="info_textSize">14sp</dimen>
+
+    <dimen name="text_title_text_size">24sp</dimen>
+    <dimen name="text_sentence_text_size">22sp</dimen>
+    <dimen name="edit_sentence_text_size">18sp</dimen>
+
+    <dimen name="text_sentence_height">40dp</dimen>
+    <dimen name="edit_sentence_height">48dp</dimen>
+    <dimen name="text_sentence_padding">4dp</dimen>
+
 
 </resources>
