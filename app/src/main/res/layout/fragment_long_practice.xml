@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="com.naze.typingapp.data.source.TimerState"/>
         <variable
             name="typing"
             type="com.naze.typingapp.viewmodel.PracticeViewModel" />
@@ -254,13 +255,11 @@
         </EditText>
 
         <Button
+            android:id="@+id/pause_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="@{() -> time.timerStart()}">
-
-        </Button>
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 </layout>

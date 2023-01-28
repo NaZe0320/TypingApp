@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.naze.typingapp.R
+import com.naze.typingapp.data.source.TimerState
 import com.naze.typingapp.databinding.FragmentLongPracticeBinding
 import com.naze.typingapp.util.CustomFragment
 import com.naze.typingapp.viewmodel.PracticeViewModel
@@ -31,11 +32,24 @@ class LongPracticeFragment: CustomFragment() {
         binding.time = timeVM
         binding.typing = practiceVM
         binding.lifecycleOwner = this.viewLifecycleOwner
+
+        startTimer()
+        btnSetting()
         return view
     }
 
     private fun setViewModel() {
         practiceVM = ViewModelProvider(requireActivity())[PracticeViewModel::class.java]
         timeVM = ViewModelProvider(requireActivity())[TimeViewModel::class.java]
+    }
+
+    private fun startTimer() {
+        timeVM.setTimerState(TimerState.Start)
+    }
+
+    private fun btnSetting() {
+        binding.pauseBtn.setOnClickListener {
+            timeVM.setTimerState(TimerState.Pause)
+        }
     }
 }
