@@ -6,10 +6,7 @@
         <import type="com.naze.typingapp.data.source.TimerState"/>
         <variable
             name="typing"
-            type="com.naze.typingapp.viewmodel.PracticeViewModel" />
-        <variable
-            name="time"
-            type="com.naze.typingapp.viewmodel.TimeViewModel" />
+            type="com.naze.typingapp.viewmodel.TypingViewModel" />
     </data>
 
     <RelativeLayout
@@ -166,11 +163,10 @@
                             android:id="@+id/progress_time"
                             android:layout_width="@dimen/progressBar_circular_length"
                             android:layout_height="@dimen/progressBar_circular_length"
-                            android:max="@{100}"
-                            android:progress="@{time.timeCount}"
+                            android:max="@{typing.max}"
                             android:progressTint="@color/progressBar_progress_color_time"
                             android:progressDrawable="@drawable/custom_progressbar_circular"
-                            app:progress="@{time.timeCount}"
+                            app:progress="@{typing.timeCount}"
 
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal">
                         </ProgressBar>
@@ -188,7 +184,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/info_textSize"
                                 android:textStyle="bold"
-                                android:text="@={time.time}"/>
+                                android:text="@{@string/time_format(typing.timeCount/60,typing.timeCount%60)}"/>
                         </LinearLayout>
                     </FrameLayout>
 

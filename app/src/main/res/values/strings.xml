@@ -6,4 +6,6 @@
     <string name="accuracy">정확도 [%]</string>
     <string name="time">시간</string>
     <string name="progress">진행률</string>
+
+    <string name="time_format">%02d:%02d</string>
 </resources>

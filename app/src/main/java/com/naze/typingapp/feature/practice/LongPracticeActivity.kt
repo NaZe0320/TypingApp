@@ -11,8 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.naze.typingapp.R
 import com.naze.typingapp.databinding.ActivityLongPracticeBinding
 import com.naze.typingapp.factory.ViewModelFactory
-import com.naze.typingapp.viewmodel.PracticeViewModel
-import com.naze.typingapp.viewmodel.TimeViewModel
+import com.naze.typingapp.viewmodel.TypingViewModel
 
 class LongPracticeActivity : AppCompatActivity() {
 
@@ -20,8 +19,7 @@ class LongPracticeActivity : AppCompatActivity() {
 
     private lateinit var navLongPractice: NavController
 
-    private lateinit var practiceViewModel : PracticeViewModel
-    private lateinit var timeViewModel: TimeViewModel
+    private lateinit var timeViewModel: TypingViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,9 +48,7 @@ class LongPracticeActivity : AppCompatActivity() {
     private fun setViewModel() {
         //val repo
         val factory = ViewModelFactory()
-
-        practiceViewModel = ViewModelProvider(this@LongPracticeActivity, factory)[PracticeViewModel::class.java]
-        timeViewModel = ViewModelProvider(this@LongPracticeActivity, factory)[TimeViewModel::class.java]
+        timeViewModel = ViewModelProvider(this@LongPracticeActivity, factory)[TypingViewModel::class.java]
 
     }
 }

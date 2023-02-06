@@ -10,5 +10,6 @@ object BindingAdapters {
     @JvmStatic fun setProgress(progressBar: ProgressBar, count: Int, max: Int) {
         Log.d("BindingAdapter","count: $count, max = $max")
         progressBar.progress = count
+        progressBar.max = max
     }
 }

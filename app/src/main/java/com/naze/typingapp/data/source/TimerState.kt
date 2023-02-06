@@ -6,3 +6,4 @@ sealed class TimerState {
     object Pause: TimerState()
     object Finish: TimerState()
 }
+
