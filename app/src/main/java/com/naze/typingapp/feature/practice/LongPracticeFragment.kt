@@ -43,7 +43,6 @@ class LongPracticeFragment: CustomFragment() {
     //초기 세팅
     private fun init() {
         vm.setTimerState(TimerState.Start)
-
     }
 
     // ViewModel 세팅

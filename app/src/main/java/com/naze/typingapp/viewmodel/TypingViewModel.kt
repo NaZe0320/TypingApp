@@ -31,6 +31,8 @@ class TypingViewModel:ViewModel() {
     private var _state: MutableLiveData<State> = MutableLiveData(State.None)
     val state:LiveData<State> get() = _state
 
+    //private var _sentence
+
     fun setTimerState(state: TimerState) = coroutineScope.launch {
         _timerFlow.emit(state)
         when (state) {
